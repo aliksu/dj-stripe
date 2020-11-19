@@ -1357,7 +1357,7 @@ class StripeCoupon(StripeObject):
     stripe_class = stripe.Coupon
     stripe_dashboard_item_name = "coupons"
 
-    stripe_id = StripeIdField(stripe_name="id", max_length=500)
+    stripe_id = StripeIdField(stripe_name="id", max_length=250)
     amount_off = StripeCurrencyField(
         null=True, blank=True,
         help_text="Amount that will be taken off the subtotal of any invoices for this customer."

@@ -2113,7 +2113,7 @@ class Migration(migrations.Migration):
                 ('description', djstripe.fields.StripeTextField(blank=True, help_text='A description of this object.', null=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('stripe_id', djstripe.fields.StripeIdField(max_length=500)),
+                ('stripe_id', djstripe.fields.StripeIdField(max_length=250)),
                 ('amount_off', djstripe.fields.StripeCurrencyField(blank=True, decimal_places=2, help_text='Amount that will be taken off the subtotal of any invoices for this customer.', max_digits=8, null=True)),
                 ('currency', djstripe.fields.StripeCharField(blank=True, help_text='Three-letter ISO currency code', max_length=3, null=True)),
                 ('duration', djstripe.fields.StripeCharField(choices=[('forever', 'Forever'), ('once', 'Once'), ('repeating', 'Repeating')], help_text='Describes how long a customer who applies this coupon will get the discount.', max_length=9)),
